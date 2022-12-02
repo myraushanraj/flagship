@@ -1,0 +1,485 @@
+#wPageBlockColumns .winContent {
+	min-width		: 0 !important;
+}
+
+/* #### PAGE ################################################################################################################## */
+
+.mwColumns {
+	margin			: 0px;
+	padding			: 0px;
+	
+	list-style		: none;
+	clear			: both;
+}
+
+.mwColumns:after {
+	content			: '';
+	display			: block;
+	clear			: both;
+}
+
+.mwColumns>DIV {
+	position		: relative;
+	float			: left;
+	height			: 100%;
+	box-sizing		: border-box;
+}
+
+.mwColumns>DIV>.column {
+}
+
+
+/* #### liveEd ################################################################################################################# */
+
+/* Allowing areas to be very narrow, for better spacer support */
+.mwColumns .liveEdArea {
+	min-width		: inherit;
+}
+
+.liveEdBlock.Columns {
+	padding-top		: 30px;
+}
+
+.liveEdBlock .mwColumns>DIV:after {
+	content			: '';
+	display			: block;
+	
+	position		: absolute;
+	left			: 0;
+	right			: 0;
+	top			: 0;
+	bottom			: 0;
+
+	border			: 1px dotted #EEE;
+	border-right		: none;
+	
+	z-index			: -1;
+}
+
+.liveEdBlock .mwColumns>DIV:first-child:after {
+	border-left		: none;
+}
+
+.liveEdBlock .mwColumns.templates>DIV:first-child:after {
+	border-right		: 1px dotted #EEE;
+}
+
+.liveEdBlock .mwColumns.templates>DIV:last-child:after {
+	border-left		: 1px dotted #EEE;
+}
+
+/*/
+.liveEdBlock .mwColumns>DIV:hover:after {
+	border-left		: 1px dotted #AAA;
+}
+
+.liveEdBlock .mwColumns>DIV:hover+LI:after {
+	border-left		: 1px dotted #AAA;
+}
+/**/
+
+/* #### EDITOR ################################################################################################################# */
+
+#wPageBlockColumns UL.mwAlignControl LI.custom {
+	float			: none;
+	width			: auto;
+} 
+
+/* ---- PREVIEW ---- */
+
+#wColumns_preview {
+	font-size		: 75%;
+}
+
+#wColumns_preview>* {
+	margin			: 5px 0px;
+}
+
+#wColumns_preview H1 {
+	margin			: 10px 0px;
+	font-size		: 150%;
+	font-weight		: bold;
+	text-align		: center;
+	
+}
+
+#wColumns_preview H2 {
+	font-size		: 120%;
+	font-weight		: bold;
+	text-align		: center;
+}
+
+#wColumns_preview IMG {
+	width			: 100%;
+}
+
+#wColumns_preview P {
+	text-align		: justify;
+}
+
+#wColumns_preview .preview-area {
+	 padding		: 5px;
+
+	 border			: 1px dotted #b4eace;
+	 border-radius		: 3px;
+
+	 color			: #0b994e;
+}
+
+/* #### STYLES TABLE ########################################################################################################### */
+
+
+.wColumns_spacingEd {
+	position		: relative;
+
+	margin			: 0px;
+	padding			: 0px;
+
+	list-style		: none;
+	clear			: both;
+}
+
+.wColumns_spacingEd,
+.wColumns_spacingEd * {
+	box-sizing		: border-box !important;
+}
+
+.wColumns_spacingEd:after {
+	content			: '';
+	display			: block;
+	clear			: both;
+}
+
+.wColumns_spacingEd>DIV {
+	position		: relative;
+	float			: left;
+	box-sizing		: border-box;
+	
+	width			: 50%;
+	height			: 200px;
+
+	border			: 1px dotted black;
+	border-left		: none;
+	
+	background		: white;
+}
+
+.wColumns_spacingEd>DIV:first-child {
+	width			: 50%;
+	border-left		: 1px dotted black;
+}
+
+.wColumns_spacingEd .bg {
+	background		: #E8E8E8;
+	height			: 100%;
+	width			: 100%;
+}
+
+.wColumns_spacingEd .title {
+	position		: absolute;
+	left			: 0;
+	right			: 0;
+	top			: 0;
+	bottom			: 0;
+	
+	text-align		: center;
+	line-height		: 198px;
+/*	
+	overflow		: hidden; 
+*/
+}
+
+
+/* ---- Spacing variants for frontend and backend ---- */
+
+
+/* ---- Size Definition ---- */
+
+	DIV.wColumns_spacingEd.pad.middle-s>DIV {
+		padding-left		: 10px; 
+		padding-right		: 10px; 
+	}
+
+	.wColumns_spacingEd.pad.middle-s>DIV:first-child {
+		padding-left		: 0px; 
+	}
+	.wColumns_spacingEd.pad.middle-s>DIV:last-child {
+		padding-right		: 0px; 
+	}
+
+	DIV.wColumns_spacingEd.pad.left-s>DIV:first-child {
+		padding-left		: 10px; 
+	}
+
+	DIV.wColumns_spacingEd.pad.right-s>DIV:last-child {
+		padding-right		: 10px; 
+	}
+	
+	DIV.wColumns_spacingEd.pad.top-s>DIV {
+		padding-top		: 10px; 
+	}
+
+	DIV.wColumns_spacingEd.pad.bottom-s>DIV {
+		padding-bottom		: 10px; 
+	}
+	
+
+/* ---- Size Definition ---- */
+
+	DIV.wColumns_spacingEd.pad.middle-m>DIV {
+		padding-left		: 20px; 
+		padding-right		: 20px; 
+	}
+
+	.wColumns_spacingEd.pad.middle-m>DIV:first-child {
+		padding-left		: 0px; 
+	}
+	.wColumns_spacingEd.pad.middle-m>DIV:last-child {
+		padding-right		: 0px; 
+	}
+
+	DIV.wColumns_spacingEd.pad.left-m>DIV:first-child {
+		padding-left		: 20px; 
+	}
+
+	DIV.wColumns_spacingEd.pad.right-m>DIV:last-child {
+		padding-right		: 20px; 
+	}
+	
+	DIV.wColumns_spacingEd.pad.top-m>DIV {
+		padding-top		: 20px; 
+	}
+
+	DIV.wColumns_spacingEd.pad.bottom-m>DIV {
+		padding-bottom		: 20px; 
+	}
+	
+
+/* ---- Size Definition ---- */
+
+	DIV.wColumns_spacingEd.pad.middle-l>DIV {
+		padding-left		: 30px; 
+		padding-right		: 30px; 
+	}
+
+	.wColumns_spacingEd.pad.middle-l>DIV:first-child {
+		padding-left		: 0px; 
+	}
+	.wColumns_spacingEd.pad.middle-l>DIV:last-child {
+		padding-right		: 0px; 
+	}
+
+	DIV.wColumns_spacingEd.pad.left-l>DIV:first-child {
+		padding-left		: 30px; 
+	}
+
+	DIV.wColumns_spacingEd.pad.right-l>DIV:last-child {
+		padding-right		: 30px; 
+	}
+	
+	DIV.wColumns_spacingEd.pad.top-l>DIV {
+		padding-top		: 30px; 
+	}
+
+	DIV.wColumns_spacingEd.pad.bottom-l>DIV {
+		padding-bottom		: 30px; 
+	}
+	
+
+/* ---- Size Definition ---- */
+
+	DIV.mwColumns.pad.middle-s>DIV {
+		padding-left		: 8px; 
+		padding-right		: 8px; 
+	}
+
+	.mwColumns.pad.middle-s>DIV:first-child {
+		padding-left		: 0px; 
+	}
+	.mwColumns.pad.middle-s>DIV:last-child {
+		padding-right		: 0px; 
+	}
+
+	DIV.mwColumns.pad.left-s>DIV:first-child {
+		padding-left		: 8px; 
+	}
+
+	DIV.mwColumns.pad.right-s>DIV:last-child {
+		padding-right		: 8px; 
+	}
+	
+	DIV.mwColumns.pad.top-s>DIV {
+		padding-top		: 8px; 
+	}
+
+	DIV.mwColumns.pad.bottom-s>DIV {
+		padding-bottom		: 8px; 
+	}
+	
+
+/* ---- Size Definition ---- */
+
+	DIV.mwColumns.pad.middle-m>DIV {
+		padding-left		: 16px; 
+		padding-right		: 16px; 
+	}
+
+	.mwColumns.pad.middle-m>DIV:first-child {
+		padding-left		: 0px; 
+	}
+	.mwColumns.pad.middle-m>DIV:last-child {
+		padding-right		: 0px; 
+	}
+
+	DIV.mwColumns.pad.left-m>DIV:first-child {
+		padding-left		: 16px; 
+	}
+
+	DIV.mwColumns.pad.right-m>DIV:last-child {
+		padding-right		: 16px; 
+	}
+	
+	DIV.mwColumns.pad.top-m>DIV {
+		padding-top		: 16px; 
+	}
+
+	DIV.mwColumns.pad.bottom-m>DIV {
+		padding-bottom		: 16px; 
+	}
+	
+
+/* ---- Size Definition ---- */
+
+	DIV.mwColumns.pad.middle-l>DIV {
+		padding-left		: 24px; 
+		padding-right		: 24px; 
+	}
+
+	.mwColumns.pad.middle-l>DIV:first-child {
+		padding-left		: 0px; 
+	}
+	.mwColumns.pad.middle-l>DIV:last-child {
+		padding-right		: 0px; 
+	}
+
+	DIV.mwColumns.pad.left-l>DIV:first-child {
+		padding-left		: 24px; 
+	}
+
+	DIV.mwColumns.pad.right-l>DIV:last-child {
+		padding-right		: 24px; 
+	}
+	
+	DIV.mwColumns.pad.top-l>DIV {
+		padding-top		: 24px; 
+	}
+
+	DIV.mwColumns.pad.bottom-l>DIV {
+		padding-bottom		: 24px; 
+	}
+	
+
+/* ---- Spacing Rulers ---- */
+
+.wColumns_spacingEd .ruler {
+	position			: absolute;
+	left				: 0px;
+	right				: 0px;
+	top				: 0px;
+	bottom				: 0px;
+	
+	width				: auto;
+	height				: auto;
+	
+	padding				: 0px;
+	margin				: 0px;
+	
+	border				: 1px solid none;
+	
+	background			: none;
+}
+
+.wColumns_spacingEd .ruler:after,
+.wColumns_spacingEd .ruler:before {
+	content				: '';
+	display				: block;
+
+	position			: absolute;
+	left				: 0px;
+	right				: 0px;
+	top				: 0px;
+	bottom				: 0px;
+	
+	width				: auto;
+	height				: auto;
+}
+
+.wColumns_spacingEd .ruler.left {
+	right				: auto;
+	width				: 30px;
+	border-right			: 1px dotted silver;
+}
+
+.wColumns_spacingEd .ruler.right {
+	left				: auto;
+	width				: 30px;
+	border-left			: 1px dotted silver;
+}
+
+.wColumns_spacingEd .ruler.left:before,
+.wColumns_spacingEd .ruler.left:after,
+.wColumns_spacingEd .ruler.right:before,
+.wColumns_spacingEd .ruler.right:after {
+	left				: 9px;
+	right				: auto;
+	border-right			: 1px dotted #DDDDDD;
+}
+
+.wColumns_spacingEd .ruler.left:after,
+.wColumns_spacingEd .ruler.right:after {
+	left				: 19px;
+}
+
+.wColumns_spacingEd .ruler.top {
+	bottom				: auto;
+	height				: 30px;
+	border-bottom			: 1px dotted silver;
+}
+
+.wColumns_spacingEd .ruler.bottom {
+	top				: auto;
+	height				: 30px;
+	border-top			: 1px dotted silver;
+}
+
+.wColumns_spacingEd .ruler.top:before,
+.wColumns_spacingEd .ruler.top:after,
+.wColumns_spacingEd .ruler.bottom:before,
+.wColumns_spacingEd .ruler.bottom:after {
+	top				: 9px;
+	bottom				: auto;
+	border-bottom			: 1px dotted #DDDDDD;
+}
+
+.wColumns_spacingEd .ruler.top:after,
+.wColumns_spacingEd .ruler.bottom:after {
+	top				: 19px;
+}
+
+.wColumns_spacingEd .ruler.hover {
+/*	border-style			: solid; */
+	border-color			: black;
+	background			: rgba(0, 172, 137, 0.05);
+}
+
+/* ---- Responsive ---- */
+
+@media screen and (max-width: 768px) {
+
+.mwColumns.pad>DIV {
+	padding				: 0px !important;
+	width				: auto !important;
+	float				: none;
+}
+
+}
